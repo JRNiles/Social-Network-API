@@ -20,12 +20,13 @@ db.once("open", () => {
 });
 
 // Define your API routes here
-const userRoutes = require('./routes/api/userRoutes');
-const thoughtRoutes = require("./routes/api/thoughtRoutes");
+//const userRoutes = require('./routes/api/userRoutes');
+//const thoughtRoutes = require("./routes/api/thoughtRoutes");
+const routes = require('./routes');
 
 
-app.use("/api/users", userRoutes);
-app.use("/api/thoughts", thoughtRoutes);
+app.use("/api", routes);
+//app.use("/api/thoughts", thoughtRoutes);
 
 
 
